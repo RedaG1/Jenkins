@@ -27,4 +27,4 @@ EXPOSE 8080
 # Command to run the Spring Boot application
 CMD ["java", "-jar", "app.jar"]
 
-LABEL authors="ramo"
+LABEL authors="reda"

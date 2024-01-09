@@ -12,6 +12,8 @@ COPY . .
 # Build the Spring Boot application using Maven
 RUN mvn clean install
 
+RUN mvn package spring-boot:repackage
+
 # Use a smaller base image for the runtime environment
 FROM eclipse-temurin:17-jre
 

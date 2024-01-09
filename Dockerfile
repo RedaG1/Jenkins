@@ -22,7 +22,7 @@ WORKDIR /app
 COPY --from=builder /app/target/fst-MicroService-0.0.1-SNAPSHOT.jar ./app.jar
 
 # Expose the port that your Spring Boot application listens on (change to the actual port)
-EXPOSE 8080
+EXPOSE 8081
 
 # Command to run the Spring Boot application
 CMD ["java", "-jar", "app.jar"]

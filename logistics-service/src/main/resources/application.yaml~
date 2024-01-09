@@ -3,9 +3,9 @@ spring:
     name: logistics-service
 
   datasource:
-    url: jdbc:mysql://localhost/spring
-    username: reda
-    password: password
+    url: jdbc:mysql://${DB_HOST}/${DB_NAME}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

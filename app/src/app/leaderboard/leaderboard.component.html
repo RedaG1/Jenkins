@@ -1,0 +1,51 @@
+<div class="mx-auto mt-[100px] w-[70%]">
+  <h1 class="text-2xl font-bold">Volunteer list!</h1>
+</div>
+<div class="flex justify-center items-center mt-[40px]">
+  <table id="volunteer_table" class="stripe hover w-[70%]">
+	<thead>
+	  <tr>
+        <!-- <th data-priority="2">Region</th> -->
+		<th>Name</th>
+		<th >Region</th>
+		<th >Age</th>
+		<th >Start date</th>
+		<th >Contribution</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+		<td>Tiger Nixon</td>
+		<td>Edinburgh</td>
+		<td>61</td>
+		<td>2011/04/25</td>
+		<td>$320,800</td>
+	  </tr>
+
+	  <tr>
+		<td>Donna Snider</td>
+        <td>Chtouk Ait Baha</td>
+		<td>27</td>
+		<td>2011/01/25</td>
+		<td>$112,000</td>
+	  </tr>
+	</tbody>
+
+  </table>
+</div>
+
+
+
+<!--Datatables -->
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+<script>
+  $(document).ready(function() {
+
+	  var table = $('#volunteer_table').DataTable({
+		  responsive: true
+	  })
+		  .columns.adjust()
+		  .responsive.recalc();
+  });
+</script>

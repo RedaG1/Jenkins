@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: gateway-service
+
+  datasource:
+    url: jdbc:mysql://${DB_HOST}/${DB_NAME}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: user
+            uri: lb://user-service
+            predicates:
+              - Path=/user/**
+            filters:
+              - StripPrefix=1
+
+          - id: assistance
+            uri: lb://assistance-service
+            predicates:
+              - Path=/assistance/**
+            filters:
+              - StripPrefix=1
+
+          - id: aid
+            uri: lb://aid-service
+            predicates:
+              - Path=/aid/**
+            filters:
+              - StripPrefix=1
+
+          - id: expression-need
+            uri: lb://expression-need-service
+            predicates:
+              - Path=/expressionneed/**
+            filters:
+              - StripPrefix=1
+
+          - id: logistics
+            uri: lb://logistics-service
+            predicates:
+              - Path=/logistics/**
+            filters:
+              - StripPrefix=1
+
+server:
+  port: 8999
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+

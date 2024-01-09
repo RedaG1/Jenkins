@@ -1,0 +1,29 @@
+
+<main>
+  <!-- HEADER -->
+  <header class="w-full ">
+    <!-- Top Navigation -->
+    <nav class="flex justify-between !bg-white">
+      <!-- logo -->
+      <div  class="flex w-[30%] justify-center items-center gap-[10px]">
+        <!-- why the fuck this routeLink doesn/t work ? <- it's routerLink!  -->
+        <a routerLink="/"><h3 class="text-black font-extrabold text-2xl">Useless FST Help</h3></a>
+        <img src="https://img.icons8.com/windows/96/sos.png" alt="sos" class="w-[70px] h-[70px] bg-[#c81010] mt-auto mb-auto"/>
+      </div>
+      <ul class="flex w-[300px] justify-between items-center !text-black">
+        <li><a  class="!text-black font-bold" routerLink="/about_us">About Us</a></li>
+        <li><a  class="!text-black font-bold" href="/contact_us">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <router-outlet></router-outlet>
+  <!-- Footer - bottom -->
+  <div class="s-12 text-center margin-bottom fixed bottom-[0px]">
+    <p class="text-size-12">Copyright 1871, Crown Prince Friedrick Wilhem of Prussia</p>
+    <p class="text-size-12">proclamation of german empire</p>
+    <p><a class="text-size-12 text-primary-hover" href="http://www.myresponsee.com" title="Responsee - lightweight responsive framework">Made Possible by Helmth Von Moltke</a></p>
+  </div>
+<script type="text/javascript" src="/assets/js/responsee.js"></script>
+<script type="text/javascript" src="/assets/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="/assets/js/template-scripts.js"></script>
+</main>

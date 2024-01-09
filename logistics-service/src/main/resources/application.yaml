@@ -3,7 +3,7 @@ spring:
     name: logistics-service
 
   datasource:
-    url: jdbc:mysql://10.1.23.128/spring
+    url: jdbc:mysql://34.107.17.26/spring
     username: reda
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver

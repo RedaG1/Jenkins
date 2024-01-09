@@ -7,7 +7,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y maven
 
 # Copy the Spring Boot application source code into the container
-COPY .. .
+COPY . .
 
 # Build the Spring Boot application using Maven
 RUN mvn clean install

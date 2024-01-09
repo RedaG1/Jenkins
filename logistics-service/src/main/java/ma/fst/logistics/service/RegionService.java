@@ -16,10 +16,6 @@ public class RegionService {
     public Region addRegion(Region region) {
         return repo.saveAndFlush(region);
     }
-    public Region findRegionByUserMail(String mail) {
-        return repo.findRegionByUserMail(mail)
-                .orElseThrow(()-> new EntityNotFoundException("region by user mail: "+mail+" no found"));
-    }
     public List<Region> getAllRegions() {
         return repo.findAll();
     }

@@ -31,10 +31,6 @@ public class RegionController {
     public ResponseEntity<List<Region>> findImpactedRegions() {
         return new ResponseEntity<>(service.getImpactedRegions(), HttpStatus.OK);
     }
-    @GetMapping("/region/find")
-    public ResponseEntity<Region> findRegionByUserMail(@RequestParam String mail) {
-        return new ResponseEntity<>(service.findRegionByUserMail(mail), HttpStatus.OK);
-    }
     @GetMapping("/region/hub/find")
     public ResponseEntity<List<Region>> findLogisticalHubs() {
         return new ResponseEntity<>(service.getLogisticalHubRegion(), HttpStatus.OK);

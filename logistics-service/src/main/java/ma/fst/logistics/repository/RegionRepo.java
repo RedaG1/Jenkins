@@ -8,6 +8,5 @@ import java.util.Optional;
 
 public interface RegionRepo extends JpaRepository<Region, Long> {
     List<Region> findAllByImpactedIsTrue();
-    Optional<Region> findRegionByUserMail(String mail);
     List<Region> findAllByLogisticalHubIsTrue();
 }
